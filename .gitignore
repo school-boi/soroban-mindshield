@@ -1,0 +1,6 @@
+/target
+# Soroban test snapshots are written by the SDK on assertion failure and are
+# not part of the sources.
+contracts/*/test_snapshots/
+__pycache__/
+*.pyc

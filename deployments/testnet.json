@@ -1,0 +1,44 @@
+{
+  "network": "testnet",
+  "rpc_url": "https://soroban-testnet.stellar.org",
+  "network_passphrase": "Test SDF Network ; September 2015",
+  "explorer": "https://stellar.expert/explorer/testnet/contract/CAULIGUW774GXMSF4SPJJDP5FLTTV42NEGT64ORMOXWDZZA5H35IVNAI",
+  "contract_id": "CAULIGUW774GXMSF4SPJJDP5FLTTV42NEGT64ORMOXWDZZA5H35IVNAI",
+  "wasm_path": "target/wasm32v1-none/release/mindshield.wasm",
+  "wasm_sha256": "d9c13cc2dfcb7b83e44e99549d6a46ca5817e88178ce477915bdf72d69cd7ce5",
+  "soroban_sdk": "27.0.6",
+  "stellar_cli": "28.1.0",
+  "admin": "GAVDTMS3D375D4VFP43M3O7VNC3X24ZMLE6RR434DJCGWYBWEYRVUHDL",
+  "tx": {
+    "upload_wasm": "b063d25d446843f45a66dccc8074819489bf62d2649c83aa29888e9228adcd2b",
+    "deploy": "dbf3acdf1eb8d079291f6f83c15ec319500132ecd4539c28bc7f627b5b4741b2",
+    "initialize": "5c437da78fb744dc154013d11544ff5a499c1199295fd954d2727f55f64a7f4e",
+    "register_zone": "3d15059db588df06c0363e789928629e6749e3f7b1ea5661363df6465554a9d9",
+    "rotate_credentials": "cfa34494c53d758aebc917d2eef83747236acd4d054bf4cbaae4b05060c1850c"
+  },
+  "config": {
+    "k_anon": 5,
+    "min_cases": 5,
+    "multiplier_bps": 30000,
+    "baseline_floor": 2,
+    "cooldown_epochs": 2,
+    "baseline_alpha_bps": 2500,
+    "epoch_length_secs": 86400,
+    "max_proof_depth": 16,
+    "max_cells_per_epoch": 256
+  },
+  "credential_root": "fe06da5e0cac187146a33708e42421348d1bdc023cbade5014967efa31a5d278",
+  "zones": [
+    {
+      "zone_id": 1,
+      "label": "dorm_north",
+      "cells": [10, 11],
+      "min_cases_override": 0
+    }
+  ],
+  "notes": [
+    "The credential root above was produced by tools/mindshield_client.py enroll --students 8 --salt 0xA5; the matching roster is deliberately not stored in this repository, because it is the only thing that links a leaf to a student.",
+    "Demo state left on chain: epoch 20735 has 6 fever cases in zone 1 and an unresolved OutbreakAlert (id 1, severity_bps 30000); epoch 20734 was closed and purged, leaving the k-anonymised summary [{cases: 5, symptom: 1, zone_id: 1}].",
+    "No secrets belong in this file. Testnet-only deployment."
+  ]
+}

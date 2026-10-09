@@ -1,0 +1,17 @@
+[package]
+name = "mindshield"
+description = "Privacy-preserving campus epidemiology and outbreak early-warning protocol on Soroban"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+publish = false
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+doctest = false
+
+[dependencies]
+soroban-sdk = "27.0.6"
+
+[dev-dependencies]
+soroban-sdk = { version = "27.0.6", features = ["testutils"] }
